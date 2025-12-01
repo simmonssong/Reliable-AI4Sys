@@ -13,7 +13,9 @@
    
 2. [SOSP'24](https://dl.acm.org/doi/pdf/10.1145/3694715.3695968) Tiered Memory Management: Access Latency is the Key! 
 
-   _Keywords: Memory management, Measurement_
+   _Midhul Vuppalapati, Rachit Agarwal_
+   
+   Keywords: Memory management, Measurement
 
    Motivation: 1) Page placement in memory. 2) Hotest pages may be not expected: Demonstrated by experiments. 3) Palcement should minimize expected latency. 
 
