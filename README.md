@@ -1,7 +1,7 @@
 # Reliable-AI4Sys
 
 ### General Methods
-1. COpter: Efficient Large-Scale Resource-Allocation via Continual Optimization
+1. [SOSP'25] COpter: Efficient Large-Scale Resource-Allocation via Continual Optimization
 
    _Suhas Jayaram Subramanya, Don Kurian Dennis, Gregory R. Ganger, Virginia Smith_
 
