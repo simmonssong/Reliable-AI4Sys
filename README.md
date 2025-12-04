@@ -32,7 +32,7 @@
 
    Motivation: 1) Dynamic: Satellite Networks' topology change frequently. 2) Generalization: NN-like approaches' general problem. 3) Large Scale: Numerous nodes and links.
 
-   Design: 1) GNN-only. 2) Graph pruning based on topology similarity (to an existing baseline topology). 3) Supervisely learn Gurobi's solution.
+   Design: 1) GNN-only: Elinimate DNN to improve generalizability. 2) Graph pruning based on topology similarity (to an existing baseline topology): improve generalizability. 3) Supervisely learn Gurobi's solution.
 
 
 2. [SIGCOMM'25]()Centralium: A Hybrid Route-Planning Framework for Large-Scale Data Center Network Migrations
