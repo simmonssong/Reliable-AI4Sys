@@ -33,3 +33,19 @@
    Motivation: 1) Dynamic: Satellite Networks' topology change frequently. 2) Generalization: NN-like approaches' general problem. 3) Large Scale: Numerous nodes and links.
 
    Design: 1) GNN-only. 2) Graph pruning based on topology similarity (to an existing baseline topology). 3) Supervisely learn Gurobi's solution.
+
+2.[SIGCOMM'25]()Centralium: A Hybrid Route-Planning Framework for Large-Scale Data Center Network Migrations
+_Yikai Lin, Mohab Gawish(Meta)_
+Keywords: Centralized Routing, Distributed Routing, Network Migration, Route Planning, BGP
+Motivation:
+1)Data centers frequently undergo large-scale network migrations
+2)BGP cannot encode the sequential and conditional routing behaviors required during transitional migration phases.
+Design:1)Route Planning Abstraction (RPA);2)Centralium Architecture;3)Two protection Mechanisms.
+
+3.[SIGCOMM'25]()From ATOP to ZCube: Automated Topology Optimization Pipeline and a Highly Cost-Effective Network Topology for Large Model Training
+_Zihan Yan, Dan Li (Tsinghua University)_
+Keywords: Data center networks, Network topology, AI infrastructure
+Motivation:
+1)The explosive growth in LLM training scales requires new large-scale network topology designs.
+2)Expert-designed topologies overlook potential asymmetric structures and struggle to balance multi-objective performance; existing automated approaches are not mature enough.
+Design:1)1. Insight-Driven Hyperparameterization;2)2. Multi-Objective Optimization Engine;3)3. High-Performance Evaluation Pipeline.
