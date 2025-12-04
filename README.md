@@ -60,18 +60,23 @@
    
    Design:1)Insight-Driven Hyperparameterization;2)Multi-Objective Optimization Engine;3)High-Performance Evaluation Pipeline.
 ### EDA
-1. [DAC'21](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=11132838) NVCell: Standard Cell Layout in Advanced Technology Nodes with Reinforcement Learning
+1. [DAC'21](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9586188) NVCell: Standard Cell Layout in Advanced Technology Nodes with Reinforcement Learning
 
    _Haoxing Ren, Matthew Fojtik_
    
    Keywords: Standard Cell Layout, RL, DRC, Placement and Routing
    
-   Motivation:
-   1) Advanced technology nodes face DRC explosion (2000+ rules) with conditional and multi-pattern correlation, hard to model analytically.
-   2) Traditional methods (simulated annealing) suffer from long runtime, variable explosion, and poor scalability.
-   3) Need automated layout generation with competitive area and DRC compliance.
+   Motivation:1) Advanced technology nodes face DRC explosion (2000+ rules) with conditional and multi-pattern correlation, hard to model analytically. 2) Traditional methods (simulated annealing) suffer from long runtime, variable explosion, and poor scalability. 3) Need automated layout generation with competitive area and DRC compliance.
 
    Design: 1) Two-stage framework: Placement (simulated annealing + RL + ML routability predictor) + Routing (genetic algorithm + RL DRC fixer). 2) RL for placement: Pre-trained with simulated annealing samples, learns device pairing/ordering to speed up runtime. 3) RL for DRC fixing: Trained on one cell, transferable to all cells by identifying local DRC patterns. 4) ML routability predictor: Two-step (simple + precise) to optimize placement for routing.
 
 
-2. [DAC'20]()
+2. [DAC'20](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9218757) GCN-RL Circuit Designer: Transferable Transistor Sizing with Graph Neural Networks and Reinforcement Learning
+
+   _Hanrui Wang, Kuan Wang, Jiacheng Yang, et al._
+
+   Keywords: Transistor Sizing, Graph Convolutional Network (GCN), RL, Transfer Learning
+
+   Motivation: 1) Analog circuit sizing relies on human experts, time-consuming with complex performance tradeoffs.  2) Traditional black-box methods (BO, ES) ignore circuit topology and cannot transfer knowledge across technology nodes/topologies.  3) Need transferable automated sizing with superior performance.
+
+   Design: 1) Graph representation: Circuit modeled as graph (nodes=components, edges=wires) to capture topology. 2) GCN-RL agent: 7-layer GCN aggregates neighbor features, Actor-Critic architecture with DDPG for continuous action space. 3) Action space: Component-specific continuous parameters to avoid discrete space explosion. 
