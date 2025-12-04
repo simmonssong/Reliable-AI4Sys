@@ -34,7 +34,8 @@
 
    Design: 1) GNN-only. 2) Graph pruning based on topology similarity (to an existing baseline topology). 3) Supervisely learn Gurobi's solution.
 
-   2.[SIGCOMM'25]()Centralium: A Hybrid Route-Planning Framework for Large-Scale Data Center Network Migrations
+
+2. [SIGCOMM'25]()Centralium: A Hybrid Route-Planning Framework for Large-Scale Data Center Network Migrations
    
    _Yikai Lin, Mohab Gawish(Meta)_
    
@@ -46,7 +47,8 @@
    
    Design:1)Route Planning Abstraction (RPA);2)Centralium Architecture;3)Two protection Mechanisms.
 
-3.[SIGCOMM'25]()From ATOP to ZCube: Automated Topology Optimization Pipeline and a Highly Cost-Effective Network Topology for Large Model Training
+
+3. [SIGCOMM'25]()From ATOP to ZCube: Automated Topology Optimization Pipeline and a Highly Cost-Effective Network Topology for Large Model Training
 
    _Zihan Yan, Dan Li (Tsinghua University)_
    
@@ -56,4 +58,4 @@
    1)The explosive growth in LLM training scales requires new large-scale network topology designs.
    2)Expert-designed topologies overlook potential asymmetric structures and struggle to balance multi-objective performance; existing automated approaches are not mature enough.
    
-   Design:1)1. Insight-Driven Hyperparameterization;2)2. Multi-Objective Optimization Engine;3)3. High-Performance Evaluation Pipeline.
+   Design:1)Insight-Driven Hyperparameterization;2)Multi-Objective Optimization Engine;3)High-Performance Evaluation Pipeline.
