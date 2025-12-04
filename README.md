@@ -59,3 +59,19 @@
    2)Expert-designed topologies overlook potential asymmetric structures and struggle to balance multi-objective performance; existing automated approaches are not mature enough.
    
    Design:1)Insight-Driven Hyperparameterization;2)Multi-Objective Optimization Engine;3)High-Performance Evaluation Pipeline.
+### EDA
+1. [DAC'21](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=11132838) NVCell: Standard Cell Layout in Advanced Technology Nodes with Reinforcement Learning
+
+   _Haoxing Ren, Matthew Fojtik_
+   
+   Keywords: Standard Cell Layout, RL, DRC, Placement and Routing
+   
+   Motivation:
+   1) Advanced technology nodes face DRC explosion (2000+ rules) with conditional and multi-pattern correlation, hard to model analytically.
+   2) Traditional methods (simulated annealing) suffer from long runtime, variable explosion, and poor scalability.
+   3) Need automated layout generation with competitive area and DRC compliance.
+
+   Design: 1) Two-stage framework: Placement (simulated annealing + RL + ML routability predictor) + Routing (genetic algorithm + RL DRC fixer). 2) RL for placement: Pre-trained with simulated annealing samples, learns device pairing/ordering to speed up runtime. 3) RL for DRC fixing: Trained on one cell, transferable to all cells by identifying local DRC patterns. 4) ML routability predictor: Two-step (simple + precise) to optimize placement for routing.
+
+
+2. [DAC'20]()
