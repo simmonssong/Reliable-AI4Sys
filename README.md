@@ -35,7 +35,7 @@
    Design: 1) GNN-only: Elinimate DNN to improve generalizability. 2) Graph pruning based on topology similarity (to an existing baseline topology): improve generalizability. 3) Supervisely learn Gurobi's solution.
 
 
-2. [SIGCOMM'25]()Centralium: A Hybrid Route-Planning Framework for Large-Scale Data Center Network Migrations
+2. [SIGCOMM'25](https://dl.acm.org/doi/pdf/10.1145/3718958.3750519)Centralium: A Hybrid Route-Planning Framework for Large-Scale Data Center Network Migrations
    
    _Yikai Lin, Mohab Gawish(Meta)_
    
@@ -45,10 +45,12 @@
    1)Data centers frequently undergo large-scale network migrations
    2)BGP cannot encode the sequential and conditional routing behaviors required during transitional migration phases.
    
-   Design:1)Route Planning Abstraction (RPA);2)Centralium Architecture;3)Two protection Mechanisms.
+   Design:
+   1)Route Planning Abstraction (RPA):Intervenes in BGP decisions by injecting an "intent" (a prioritized set of paths) and three primitives: Path Selection RPA, Route Attribute RPA, and Route Filter RPA.
+   2)Hybrid Control Plane: Centralium + BGP. Centralium is a centralized controller embedded with the RPA module, while BGP is responsible for route execution.
+   3)Protection Mechanisms: Loop avoidance via worst-attribute advertisement, and transient traffic imbalance avoidance via bottom-up deployment.
 
-
-3. [SIGCOMM'25]()From ATOP to ZCube: Automated Topology Optimization Pipeline and a Highly Cost-Effective Network Topology for Large Model Training
+4. [SIGCOMM'25](https://dl.acm.org/doi/10.1145/3718958.3750503)From ATOP to ZCube: Automated Topology Optimization Pipeline and a Highly Cost-Effective Network Topology for Large Model Training
 
    _Zihan Yan, Dan Li (Tsinghua University)_
    
