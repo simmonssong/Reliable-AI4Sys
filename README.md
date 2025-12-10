@@ -60,7 +60,7 @@
    1)The explosive growth in LLM training scales requires new large-scale network topology designs.
    2)Expert-designed topologies overlook potential asymmetric structures and struggle to balance multi-objective performance; existing automated approaches are not mature enough.
    
-   Design:1)Insight-Driven Hyperparameterization;2)Multi-Objective Optimization Engine;3)High-Performance Evaluation Pipeline.
+   Design:1)formalize existing topologies into hyperparameters to  construct topology space.2)using the NSGA-II evolutionary algorithm to explore topology designs and evaluate in simulator(astra-sim).3)2-stage Evaluator: the first stage produces a Pareto-optimal set of topologies,the second obtains the final results.
 ### EDA
 1. [DAC'21](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9586188) NVCell: Standard Cell Layout in Advanced Technology Nodes with Reinforcement Learning
 
