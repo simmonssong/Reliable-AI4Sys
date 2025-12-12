@@ -92,4 +92,36 @@
 
    Motivation: 1) Analog circuit sizing relies on human experts, time-consuming with complex performance tradeoffs.  2) Traditional black-box methods (BO, ES) ignore circuit topology and cannot transfer knowledge across technology nodes/topologies.  3) Need transferable automated sizing with superior performance.
 
-   Design: 1)Circuit modeled as graph to capture topology. 2)7-layer GCN aggregates neighbor features, Actor-Critic architecture with DDPG for continuous action space. 3) Action space: Component-specific continuous parameters to avoid discrete space explosion. 
+   Design: 1)Circuit modeled as graph to capture topology. 2)7-layer GCN aggregates neighbor features, Actor-Critic architecture with DDPG for continuous action space. 3) Action space: Component-specific continuous parameters to avoid discrete space explosion.
+
+
+3. [DAC'24](https://dl.acm.org/doi/pdf/10.1145/3649329.3661850) PVTSizing: A TuRBO-RL-Based Batch-Sampling Optimization Framework for PVT-Robust Analog Circuit Synthesis
+   
+   _Zichen Kong, Xiyuan Wang_
+   
+   Keywords:PVT-Robust, TuRBO, PCGrad, Batch Sampling, Cutting
+   
+   Motivation: 1)Existing tools lack efficient PVT exploration strategies, leading to redundant simulations. 2) Traditional methods either treat each PVT condition as independent or use low-quality initial sampling. 3) Need an automated framework to balance PVT dynamically.
+   
+   Design: 1) TuRBO for high-quality initial sampling. 2) PCGrad algorithm to handle optimization conflicts across PVT corners. 3) Critic-assisted pruning to predict scheme impact and filter ineffective candidates. 4) tighter training constraints, looser validation constraints.
+
+
+4. [DAC'25](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=11132699) Reinforcement Learning-Driven Window Selection for Enhanced Window-Based Rip-up and Reroute in Chip Detailed Routing
+   
+   _Yu-Chan Keng, Yu-Chun Pai_
+   
+   Keywords: Detailed Routing, Rip-up and Reroute (RUR), Design Rule Violation (DRV), RL, SE-ResNet, Dynamic Window
+   
+   Motivation: 1) Traditional tools use fixed windows, failing to adapt to DRV distribution. 2) Fixed RUR modes (RM0/RM1) lead to inefficiency. 3) DRV propagation is hard to handle with static strategies.
+   
+   Design: 1) Model detailed routing as RL task, with SE-ResNet as the core network for feature extraction and decision-making. 2) Action space: sequential window extension and RM mode selection. 3) Set multi-component reward: window shape/size reward, DRV correction reward, and RM mode penalty to balance effect and efficiency.
+
+5. [DAC'25](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=11132897)  Hardware Generation with High Flexibility using Reinforcement Learning Enhanced LLMs
+   
+   _Yifang Zhao, Weimin Fu_
+   
+   Keywords: Offline dataset, RTL Code, LLMs, PPA Optimization, DPO
+   
+   Motivation: 1) Traditional flows discover mismatches only after synthesis, leading to high iteration cost. 2) Existing LLM-based hardware generation ignores post-synthesis PPA metrics. 3) Real-time PPA simulation is computationally expensive, while ML-based approximation lacks precision.
+   
+   Design: 1) Integrating RL with LLMs to incorporate PPA feedback into code generation. 2) Build offline PPA dataset: generate multiple RTL codes per function description, synthesize to extract PPA values. 3) Create preference datasets via configurable PPA weights to select optimal/worst codes. 4) Use DPO algorithm for RL training. 5) Compare two training strategies (RL-only vs. SFT-RL).
