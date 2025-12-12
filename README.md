@@ -50,7 +50,18 @@
    2)Hybrid Control Plane: Centralium + BGP. Centralium is a centralized controller embedded with the RPA module, while BGP is responsible for route execution.
    3)Protection Mechanisms: Loop avoidance via worst-attribute advertisement, and transient traffic imbalance avoidance via bottom-up deployment.
 
-4. [SIGCOMM'25](https://dl.acm.org/doi/10.1145/3718958.3750503)From ATOP to ZCube: Automated Topology Optimization Pipeline and a Highly Cost-Effective Network Topology for Large Model Training
+3. [SIGCOMM'25]() PreTE: Traffic Engineering with Predictive Failures
+   _Congcong Miao(Tencent), Zhizhen Zhong(Massachusetts Institute of Technology) etc_
+
+   keywords:Wide-area networks, Traffic engineering, Optical Failures, Machine  learning, Network optimization
+   
+   Key Insight:25% fibers usually transmit a "warning signal" (optical degradation) seconds or minutes before the actual cut.
+   
+   motivation:1)Network operators want their fibers both High Utilization and  High Availability.2)use this "warning signal" to switch from static guessing to dynamic prediction
+   
+   design: 1)dynamically adjust the failure probability by NN.2)take advantage of the "time window" of deterioration signals to built new tunnels.3)employ Bender’s Decomposition(master choose scenario and sub calculate allocation, iterate) to optimizing traffic flow allocations.
+
+5. [SIGCOMM'25](https://dl.acm.org/doi/10.1145/3718958.3750503)From ATOP to ZCube: Automated Topology Optimization Pipeline and a Highly Cost-Effective Network Topology for Large Model Training
 
    _Zihan Yan, Dan Li (Tsinghua University)_
    
