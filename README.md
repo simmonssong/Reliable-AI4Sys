@@ -125,3 +125,33 @@
    Motivation: 1) Traditional flows discover mismatches only after synthesis, leading to high iteration cost. 2) Existing LLM-based hardware generation ignores post-synthesis PPA metrics. 3) Real-time PPA simulation is computationally expensive, while ML-based approximation lacks precision.
    
    Design: 1) Integrating RL with LLMs to incorporate PPA feedback into code generation. 2) Build offline PPA dataset: generate multiple RTL codes per function description, synthesize to extract PPA values. 3) Create preference datasets via configurable PPA weights to select optimal/worst codes. 4) Use DPO algorithm for RL training. 5) Compare two training strategies (RL-only vs. SFT-RL).
+
+6. [DAC'24](https://dl.acm.org/doi/pdf/10.1145/3649329.3657365 ) CAMO: Correlation-Aware Mask Optimization with Modulated Reinforcement Learning
+   
+   _Xiaoxiao Liang, Haoyu Yang, Kang Liu, Bei Yu, Yuzhe Ma_  
+
+   Keywords: Optical Proximity Correction, RL, GNN, RNN, Inspired Modulator.  
+
+   Motivation: 1) Regression- and generative-based OPC are bounded by dataset quality and fail on complex metal layers. 2) Existing RL-OPC ignores spatial correlation among neighboring segments.  3) Action space grows exponentially.  
+
+   Design: 1) GraphSAGE fuses local geometry along proximity edges.  2) OPC-inspired modulator: guiding stable and fast convergence. 3) Two-stage training: warm-up by Calibre, followed by self-exploration to surpass expert.
+
+7. [DAC'24](https://dl.acm.org/doi/pdf/10.1145/3649329.3657335 ) Using Probabilistic Model Rollouts to Boost the Sample Efficiency of Reinforcement Learning for Automated Analog Circuit Sizing  
+
+   _Mohsen Ahmadzadeh, Georges G. E. Gielen_  
+
+   Keywords: Analog Circuit Sizing, Model-Based RL, TD3.  
+
+   Motivation: 1) Analog sizing demands thousands of SPICE-level simulations. 2) Genetic/Bayesian optimizers either converge too slowly. 3) Need sample-efficient RL that retains accuracy while cutting simulation.  
+
+   Design: 1) MBTD3: wraps TD3 with an ensemble of probabilistic neural nets that output mean+variance of next circuit specs. 2) Short k-step rollouts are branched from past real states, learning cheap steps. 3) Optimal-Neighbourhood Exploration. 4) MA-MBTD3: partitions large circuits into weakly-coupled sub-blocks; each block owns a TD3 agent.
+
+9. [DAC'24](https://dl.acm.org/doi/pdf/10.1145/3649329.3657365 ) Advanced Reinforcement Learning Algorithms to Optimize Design Verification  
+
+    _Zahra Aref, Rohit Suvarna, Bill Hughes, Sandeep Srinivasan, Narayan B. Mandayam_  
+
+   Keywords: Design Verification, DDPG, PEF ,FIFO Depth.  
+
+   Motivation: 1) Deep FIFOs: hard-to-hit states remain uncovered. 2) Bayesian optimization is slower on 32-D stimulus knob space. 3) First RL approach to maximize average FIFO depth.  
+
+   Design: 1) discrete blocks → single-state bandit. 2) DDPG-PER prioritizes high-TD-error experiences, boosting sample efficiency.
